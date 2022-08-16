@@ -1,0 +1,91 @@
+.c-tradingname {
+    &wrapper {
+        display: flex;
+        max-width: 960px;
+        width: 100%;
+        margin: 0 auto 4.2%;
+        padding-left: 40px;
+        @include sp {
+            max-width: 335px;
+            display: inherit;
+            margin: 0 auto;
+            padding-left: 0;
+        }
+
+        &__img {
+            max-width: 308px;
+            width: 100%;
+            margin-right: 68px;
+            padding-top: 9px;
+            @include sp {
+                max-width: 100%;
+                height: 80px;
+                margin-right: 0;
+                margin-bottom: 16px;
+                text-align: center;
+            }
+            img{
+                @include sp {
+                    margin-bottom: 15px;
+                }
+            }
+        }
+
+        &__text {
+            font-size: 2.4rem;
+            font-weight: 500;
+            line-height: 1.7;
+
+            p {
+                display: flex;
+            }
+
+            &1 {
+                margin-right: 101px;
+                position: relative;
+                width: 32px;
+                display: inline-block;
+                @include sp {
+                    margin-right: 52px;
+                        font-size: 2rem;
+                        padding-left: 10px;
+                        line-height: 2.1;
+                    }
+                }
+            
+
+            &1::before {
+                content: "";
+                background: #fff;
+                width: 62px;
+                height: 1px;
+                position: absolute;
+                top: 46%;
+                left: 160%;
+                transform: translatey(-50%);
+                @include sp {
+                    width: 19px;
+                    height: 1px;
+                    left: 168%;
+                }
+            }
+
+            &2 {
+                font-size: 2.4rem;
+                letter-spacing: 0.02em;
+                line-height: 1.9;
+                @include sp {
+                    font-size: 1.4rem;
+                    letter-spacing: 0.03em;
+                    line-height: 3;
+                }
+                &2{
+                    @include sp {
+                        display: none;
+                    }
+                }
+            }
+        
+        }
+    }
+}
